@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		ACD32D0725E8F3550041E450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32D0625E8F3550041E450 /* ContentView.swift */; };
 		ACD32D0925E8F3560041E450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD32D0825E8F3560041E450 /* Assets.xcassets */; };
 		ACD32D0C25E8F3560041E450 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD32D0B25E8F3560041E450 /* Preview Assets.xcassets */; };
+		ACD32D1525E8F4980041E450 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32D1425E8F4980041E450 /* Home.swift */; };
+		ACD32D1825E8F68D0041E450 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32D1725E8F68D0041E450 /* Login.swift */; };
+		ACD32D2C25E8FEB60041E450 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32D2B25E8FEB60041E450 /* LoginViewModel.swift */; };
+		ACD32D3725E907560041E450 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ACD32D3625E907560041E450 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		ACD32D0825E8F3560041E450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACD32D0B25E8F3560041E450 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACD32D0D25E8F3560041E450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACD32D1425E8F4980041E450 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		ACD32D1725E8F68D0041E450 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		ACD32D2B25E8FEB60041E450 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD32D3725E907560041E450 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +46,7 @@
 			children = (
 				ACD32D0325E8F3550041E450 /* SignIn_Apple */,
 				ACD32D0225E8F3550041E450 /* Products */,
+				ACD32D3525E907560041E450 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +63,9 @@
 			children = (
 				ACD32D0425E8F3550041E450 /* SignIn_AppleApp.swift */,
 				ACD32D0625E8F3550041E450 /* ContentView.swift */,
+				ACD32D1425E8F4980041E450 /* Home.swift */,
+				ACD32D1725E8F68D0041E450 /* Login.swift */,
+				ACD32D2B25E8FEB60041E450 /* LoginViewModel.swift */,
 				ACD32D0825E8F3560041E450 /* Assets.xcassets */,
 				ACD32D0D25E8F3560041E450 /* Info.plist */,
 				ACD32D0A25E8F3560041E450 /* Preview Content */,
@@ -67,6 +79,13 @@
 				ACD32D0B25E8F3560041E450 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACD32D3525E907560041E450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +104,9 @@
 			dependencies = (
 			);
 			name = SignIn_Apple;
+			packageProductDependencies = (
+				ACD32D3625E907560041E450 /* FirebaseAuth */,
+			);
 			productName = SignIn_Apple;
 			productReference = ACD32D0125E8F3550041E450 /* SignIn_Apple.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +134,9 @@
 				Base,
 			);
 			mainGroup = ACD32CF825E8F3540041E450;
+			packageReferences = (
+				ACD32D2E25E904200041E450 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = ACD32D0225E8F3550041E450 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +164,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD32D0725E8F3550041E450 /* ContentView.swift in Sources */,
+				ACD32D1525E8F4980041E450 /* Home.swift in Sources */,
 				ACD32D0525E8F3550041E450 /* SignIn_AppleApp.swift in Sources */,
+				ACD32D2C25E8FEB60041E450 /* LoginViewModel.swift in Sources */,
+				ACD32D1825E8F68D0041E450 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +295,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SignIn_Apple/SignIn_Apple.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SignIn_Apple/Preview Content\"";
 				DEVELOPMENT_TEAM = R4XB56HC9M;
@@ -279,6 +309,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "iMaxiOS.SignIn-Apple";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,6 +320,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SignIn_Apple/SignIn_Apple.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SignIn_Apple/Preview Content\"";
 				DEVELOPMENT_TEAM = R4XB56HC9M;
@@ -301,6 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "iMaxiOS.SignIn-Apple";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACD32D2E25E904200041E450 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACD32D3625E907560041E450 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACD32D2E25E904200041E450 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACD32CF925E8F3540041E450 /* Project object */;
 }

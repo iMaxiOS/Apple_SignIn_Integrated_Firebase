@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("log_status") var logStatus = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        
+        if logStatus {
+            Home()
+        } else {
+            Login()
+        }
     }
 }
 
